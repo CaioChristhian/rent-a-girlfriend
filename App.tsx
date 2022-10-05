@@ -31,7 +31,7 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <WaifuDetails />
+      <Home />
     </ThemeProvider>
   );
 }
