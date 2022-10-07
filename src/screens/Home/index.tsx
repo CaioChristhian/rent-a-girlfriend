@@ -1,9 +1,11 @@
 import React from 'react';
 import { StatusBar } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 import { RFValue } from 'react-native-responsive-fontsize';
 
 import Logo from '../../assets/logo.svg';
 
+import { PropsStack } from '../../routes/models';
 import { Waifu } from '../../components/Waifu';
 
 import {
@@ -13,6 +15,8 @@ import {
 } from './styles';
 
 export function Home(){
+  const navigation = useNavigation<PropsStack>()
+
   const waifuDataOne = {
     brand: 'Kanojo',
     name: 'Mizuhara Chizuru',
@@ -30,6 +34,10 @@ export function Home(){
       price: 180
     },
     thumbnail: 'https://i.pinimg.com/736x/f0/83/5e/f0835ed43a4fa8063f38490aa04d396b.jpg'
+  }
+
+  function handleWaifuDetails() {
+    navigation.navigate("WaifuDetails", { name: 'WaifuDetails' })
   }
 
   return (
@@ -54,7 +62,7 @@ export function Home(){
       <WaifuList
         data={[1,2,3,4,5,6]}
         keyExtractor={item => String(item)}
-        renderItem={({item}) => <Waifu data={waifuDataOne} />}
+        renderItem={({item}) => <Waifu data={waifuDataOne} onPress={handleWaifuDetails} />}
       />
      </Container>
   );

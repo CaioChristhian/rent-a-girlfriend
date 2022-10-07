@@ -1,4 +1,5 @@
 import React from 'react';
+import { RectButtonProps } from 'react-native-gesture-handler';
 import { RFValue } from 'react-native-responsive-fontsize';
 
 import FlowerSvg from '../../assets/lotus.svg';
@@ -21,13 +22,13 @@ interface WaifuData {
   thumbnail: string;
 }
 
-interface Props {
+interface Props extends RectButtonProps {
   data: WaifuData;
 }
 
-export function Waifu({ data }: Props){
+export function Waifu({ data, ...rest }: Props){
   return (
-    <Container>
+    <Container {...rest}>
       <Details>
         <Brand>{data.brand}</Brand>
         <Name>{data.name}</Name>

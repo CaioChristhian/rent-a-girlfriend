@@ -1,10 +1,12 @@
 import React from 'react';
 import { StatusBar } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 import { Accessory } from '../../components/Accessory';
 import { BackButton } from '../../components/BackButton';
 import { ImageSlider } from '../../components/ImageSlider';
 import { Button } from '../../components/Button';
+import { PropsStack } from '../../routes/models';
 
 import HeightSvg from '../../assets/ruler.svg';
 import HairSvg from '../../assets/hair-cut.svg';
@@ -31,6 +33,12 @@ import {
 } from './styles';
 
 export function WaifuDetails(){
+  const navigation = useNavigation<PropsStack>();
+
+  function handleConfirmRental() {
+    navigation.navigate('Scheduling', { name: 'Scheduling' })
+  }
+
   return (
     <Container>
       <StatusBar 
@@ -76,7 +84,7 @@ export function WaifuDetails(){
       </Content>
 
       <Footer>
-        <Button title='Confirmar' />
+        <Button title='Escolher período do aluguel' onPress={() => handleConfirmRental()} />
       </Footer>
     </Container>
   );

@@ -1,9 +1,12 @@
 import React from 'react';
 import { useTheme } from 'styled-components';
+import { useNavigation } from '@react-navigation/native';
 
 import { BackButton } from '../../components/BackButton';
 import { Button } from '../../components/Button';
 import { Calendar } from '../../components/Calendar';
+import { PropsStack } from '../../routes/models';
+
 
 import ArrowSvg from '../../assets/arrow-right.svg';
 
@@ -23,6 +26,11 @@ import {
 
 export function Scheduling(){
   const theme = useTheme();
+  const navigation = useNavigation<PropsStack>();
+
+  function handleConfirmScheduling() {
+    navigation.navigate('SchedulingDetails', { name: 'SchedulingDetails' })
+  }
 
   return (
     <Container>
@@ -66,7 +74,7 @@ export function Scheduling(){
       </Content>
 
       <Footer>
-        <Button title="Confirmar" />
+        <Button title="Confirmar" onPress={() => handleConfirmScheduling()} />
       </Footer>
     </Container>
   );
