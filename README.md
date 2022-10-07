@@ -13,4 +13,9 @@
 <p align="center">
   <img alt="Login-Screen" style="border-radius: 10px" src=".github/girl-details.png" max-width="100%" height="600px">
 </p>
+
+<p align="center">Interface beta</p>
+<p align="center">
+  <img alt="Login-Screen" style="border-radius: 10px" src=".github/interface-rascunho.gif" max-width="100%" height="600px">
+</p>
 <br>
