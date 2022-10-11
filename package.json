@@ -4,6 +4,7 @@
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
     "start": "expo start",
+    "api": "json-server ./src/services/server.json --host 192.168.0.138 --port 3333 --delay 700",
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web"
@@ -13,11 +14,14 @@
     "@expo-google-fonts/inter": "^0.2.2",
     "@react-navigation/native": "^6.0.13",
     "@react-navigation/native-stack": "^6.9.0",
+    "axios": "^1.1.2",
     "expo": "~46.0.13",
     "expo-app-loading": "~2.1.0",
     "expo-font": "~10.2.0",
     "expo-splash-screen": "~0.16.2",
     "expo-status-bar": "~1.4.0",
+    "global": "^4.4.0",
+    "json-server": "^0.17.0",
     "react": "18.0.0",
     "react-dom": "18.0.0",
     "react-native": "0.69.6",

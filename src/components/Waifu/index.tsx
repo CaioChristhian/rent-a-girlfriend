@@ -3,6 +3,7 @@ import { RectButtonProps } from 'react-native-gesture-handler';
 import { RFValue } from 'react-native-responsive-fontsize';
 
 import FlowerSvg from '../../assets/lotus.svg';
+import { GirlDTO } from '../../dtos/GirlDTO';
 
 import {
   Container, Details,
@@ -12,18 +13,8 @@ import {
   Type, WaifuImage
 } from './styles';
 
-interface WaifuData {
-  brand: string;
-  name: string;
-  rent: {
-    period: string;
-    price: number;
-  },
-  thumbnail: string;
-}
-
 interface Props extends RectButtonProps {
-  data: WaifuData;
+  data: GirlDTO;
 }
 
 export function Waifu({ data, ...rest }: Props){

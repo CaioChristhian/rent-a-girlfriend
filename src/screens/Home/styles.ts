@@ -2,9 +2,11 @@ import { FlatList } from 'react-native';
 import { RFValue } from 'react-native-responsive-fontsize';
 import styled from 'styled-components/native';
 
+import { GirlDTO } from '../../dtos/GirlDTO';
+
 export const Container = styled.View`
   flex: 1;
-  background-color: ${({ theme }) => theme.colors.background_primary};
+  background-color: ${({ theme }) => theme.colors.line};
 `;
 
 export const Header = styled.View`
@@ -28,12 +30,9 @@ export const TotalWaifus = styled.Text`
 
 `;
 
-export const WaifuList = styled(FlatList).attrs({
+export const WaifuList = styled(FlatList<GirlDTO>).attrs({
   contentContainerStyle: {
     padding: 24
   },
-  showsVerticalScrollIndicator: false
-})`
-  
-
-`;
+  showsVerticalScrollIndicator: false,
+})``;
