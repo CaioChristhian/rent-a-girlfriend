@@ -10,8 +10,8 @@ export interface GirlDTO {
   types: string;
   thumbnail: string;
   details: {
-      type: string;
-      name: string;
+    type: string;
+    name: string;
   }[];
   photos: string[];
 }

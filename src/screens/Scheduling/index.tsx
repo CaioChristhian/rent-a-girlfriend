@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTheme } from 'styled-components';
-import { useNavigation } from '@react-navigation/native';
+import { CommonActions, useNavigation } from '@react-navigation/native';
 
 import { BackButton } from '../../components/BackButton';
 import { Button } from '../../components/Button';
@@ -32,11 +32,15 @@ export function Scheduling(){
     navigation.navigate('SchedulingDetails', { name: 'SchedulingDetails' })
   }
 
+  function handleBack() {
+    navigation.dispatch(CommonActions.goBack())
+  }
+
   return (
     <Container>
       <Header>
         <BackButton 
-          onPress={() => {}}
+          onPress={handleBack}
           color={theme.colors.shape}
         />
 
