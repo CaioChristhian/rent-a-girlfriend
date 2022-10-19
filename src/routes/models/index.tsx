@@ -11,10 +11,12 @@ export type PropsNavigationStack = {
   }
   Scheduling: {
     name: string;
+    girl: GirlDTO;
   }
   SchedulingDetails: {
     name: string;
-
+    girl: GirlDTO;
+    dates: {}
   }
   SchedulingComplete: {
     name: string;

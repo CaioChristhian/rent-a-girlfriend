@@ -38,7 +38,7 @@ export function WaifuDetails(){
   const { girl } = route.params as Params;
 
   function handleConfirmRental() {
-    navigation.navigate('Scheduling', { name: 'Scheduling' })
+    navigation.navigate('Scheduling', { name: 'Scheduling', girl: girl  })
   }
   
   function handleBack() {

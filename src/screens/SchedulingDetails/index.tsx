@@ -1,22 +1,17 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useTheme } from 'styled-components';
 import { Feather } from '@expo/vector-icons';
 import { StatusBar } from 'react-native';
 import { RFValue } from 'react-native-responsive-fontsize';
-import { useNavigation } from '@react-navigation/native';
+import { CommonActions, useNavigation, useRoute } from '@react-navigation/native';
 
 import { PropsStack } from '../../routes/models';
 import { Accessory } from '../../components/Accessory';
 import { BackButton } from '../../components/BackButton';
 import { ImageSlider } from '../../components/ImageSlider';
 import { Button } from '../../components/Button';
-
-import HeightSvg from '../../assets/ruler.svg';
-import HairSvg from '../../assets/hair-cut.svg';
-import WaistSvg from '../../assets/waist.svg';
-import EyesColors from '../../assets/eyes.svg';
-import BustSvg from '../../assets/brassiere.svg';
-import PeachSvg from '../../assets/peach.svg';
+import { GirlDTO } from '../../dtos/GirlDTO';
+import { getDetailsIcon } from '../../utils/getDetailsIcon';
 
 import {
   Container, 
@@ -43,14 +38,43 @@ import {
   RentalPriceQuota,
   RentalPriceTotal
 } from './styles';
+import { format } from 'date-fns';
+import { getPlatformDate } from '../../utils/getPlatformDate';
+
+interface Params {
+  girl: GirlDTO;
+  dates: string[];
+}
+
+interface RentalPeriod {
+  start: string;
+  end: string;
+}
 
 export function SchedulingDetails(){
+  const [rentalPeriod, setRentalPeriod] = useState<RentalPeriod>({} as RentalPeriod)
+
   const theme = useTheme();
   const navigation = useNavigation<PropsStack>();
+  const route = useRoute();
+  const { girl, dates } = route.params as Params;
+
+  const rentalTotal = Number(dates.length * girl.rent.price)
 
   function handleConfirmSchedulingDetails() {
     navigation.navigate('SchedulingComplete', { name: 'SchedulingComplete' })
   }
+
+  function handleBack() {
+    navigation.dispatch(CommonActions.goBack())
+  }
+
+  useEffect(() => {
+    setRentalPeriod({
+      start: format(getPlatformDate(new Date(dates[0])), 'dd/MM/yyyy'),
+      end: format(getPlatformDate(new Date(dates[dates.length - 1])), 'dd/MM/yyyy'),
+    })
+  }, [])
 
   return (
     <Container>
@@ -60,33 +84,32 @@ export function SchedulingDetails(){
         translucent
       />
       <Header>
-        <BackButton onPress={() => {}} />
+        <BackButton onPress={handleBack} />
       </Header>
 
       <GirlImages>
-        <ImageSlider imagesUrl={['https://64.media.tumblr.com/0f18a9079f39b8fb14c9d0677139a654/49952d61b86e3226-49/s1280x1920/cc2b62044b8d6a3147466710000d2241d82afed1.jpg']} />
+        <ImageSlider imagesUrl={girl.photos} />
       </GirlImages>
 
       <Content>
         <Details>
           <Description>
-            <Brand>Kanojo</Brand>
-            <Name>Mizuhara</Name>
+            <Brand>{girl.brand}</Brand>
+            <Name>{girl.name}</Name>
           </Description>
 
           <Rent>
-            <Period>Ao dia</Period>
-            <Price>R$ 500</Price>
+            <Period>{girl.rent.period}</Period>
+            <Price>R$ {girl.rent.price}</Price>
           </Rent>
         </Details>
 
         <Accessories>
-          <Accessory name='160cm' icon={HeightSvg} />
-          <Accessory name='Liso Castanho' icon={HairSvg} />
-          <Accessory name='63cm' icon={WaistSvg} />
-          <Accessory name='Castanhos' icon={EyesColors} />
-          <Accessory name='85cm' icon={BustSvg} />
-          <Accessory name='Média' icon={PeachSvg} />
+          {
+            girl.details.map(accessory => (
+              <Accessory key={accessory.type} name={accessory.name} icon={getDetailsIcon(accessory.type)} />
+            ))
+          }
         </Accessories>
 
         <RentalPeriod>
@@ -100,7 +123,7 @@ export function SchedulingDetails(){
 
           <DateInfo>
             <DateTitle>DE</DateTitle>
-            <DateValue>16/06/2021</DateValue>
+            <DateValue>{rentalPeriod.start}</DateValue>
           </DateInfo>
 
           <Feather 
@@ -111,15 +134,15 @@ export function SchedulingDetails(){
 
           <DateInfo>
             <DateTitle>ATÉ</DateTitle>
-            <DateValue>18/06/2021</DateValue>
+            <DateValue>{rentalPeriod.end}</DateValue>
           </DateInfo>
         </RentalPeriod>
 
         <RentalPrice>
           <RentalPriceLabel>TOTAL</RentalPriceLabel>
           <RentalPriceDetails>
-            <RentalPriceQuota>R$ 500 x3 diárias</RentalPriceQuota>
-            <RentalPriceTotal>R$ 1.500</RentalPriceTotal>
+            <RentalPriceQuota>{`R$ ${girl.rent.price} x${dates.length} diárias`}</RentalPriceQuota>
+            <RentalPriceTotal>R$ {rentalTotal}</RentalPriceTotal>
           </RentalPriceDetails>
         </RentalPrice>
       </Content>
