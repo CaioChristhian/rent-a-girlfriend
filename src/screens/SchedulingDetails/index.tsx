@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useTheme } from 'styled-components';
 import { Feather } from '@expo/vector-icons';
-import { StatusBar } from 'react-native';
+import { Alert, StatusBar } from 'react-native';
 import { RFValue } from 'react-native-responsive-fontsize';
 import { CommonActions, useNavigation, useRoute } from '@react-navigation/native';
 
@@ -40,6 +40,7 @@ import {
 } from './styles';
 import { format } from 'date-fns';
 import { getPlatformDate } from '../../utils/getPlatformDate';
+import { api } from '../../services/api';
 
 interface Params {
   girl: GirlDTO;
@@ -61,8 +62,20 @@ export function SchedulingDetails(){
 
   const rentalTotal = Number(dates.length * girl.rent.price)
 
-  function handleConfirmSchedulingDetails() {
-    navigation.navigate('SchedulingComplete', { name: 'SchedulingComplete' })
+  async function handleConfirmSchedulingDetails() {
+    const schedulesByGirl = await api.get(`/schedules_bygirls/${girl.id}`);
+
+    const unavailable_dates = [
+      ...schedulesByGirl.data.unavailable_dates,
+      ...dates
+    ]
+
+    api.put(`/schedules_bygirls/${girl.id}`, {
+      id: girl.id,
+      unavailable_dates
+    })
+    .then(() =>  navigation.navigate('SchedulingComplete', { name: 'SchedulingComplete' }))
+    .catch(() => Alert.alert('Não foi possível confirmar o agendamento.'))
   }
 
   function handleBack() {
