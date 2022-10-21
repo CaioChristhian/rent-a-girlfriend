@@ -21,6 +21,9 @@ export type PropsNavigationStack = {
   SchedulingComplete: {
     name: string;
   }
+  MyGirls: {
+    name: string;
+  }
 }
 
 export type PropsStack = NativeStackNavigationProp<PropsNavigationStack>

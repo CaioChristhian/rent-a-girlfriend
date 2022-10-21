@@ -288,7 +288,12 @@
         "2022-10-22",
         "2022-10-19",
         "2022-10-20",
-        "2022-10-21"
+        "2022-10-21",
+        "2022-10-28",
+        "2022-10-29",
+        "2022-10-30",
+        "2022-10-26",
+        "2022-10-27"
       ]
     },
     {
@@ -304,7 +309,10 @@
         "2022-05-29",
         "2022-05-30",
         "2022-05-29",
-        "2022-05-30"
+        "2022-05-30",
+        "2022-10-27",
+        "2022-10-28",
+        "2022-10-29"
       ]
     },
     {
@@ -321,7 +329,9 @@
         "2022-07-18",
         "2022-05-28",
         "2022-05-29",
-        "2022-05-30"
+        "2022-05-30",
+        "2022-10-30",
+        "2022-10-31"
       ]
     },
     {
@@ -404,156 +414,9 @@
           "https://i.pinimg.com/564x/2f/66/6e/2f666e2dc60ddce28d8dd1698fc98e35.jpg"
         ]
       },
-      "startDate": "28/11/2022",
-      "endDate": "30/11/2022",
+      "startDate": "26/10/2022",
+      "endDate": "27/10/2022",
       "id": 1
-    },
-    {
-      "user_id": 1,
-      "girl": {
-        "id": "52930821-cbea-4b05-9f45-7c02b1bb0d8c",
-        "brand": "Bunny Girl",
-        "name": "Sakurajima Mai",
-        "about": "Mai é um indivíduo atraente com cabelos pretos na altura da cintura que tem franja pendurada no lado esquerdo com uma presilha em forma de coelho nas costas, olhos azul-púrpura e um corpo esbelto e bem definido. Em seu traje de coelho, ela usa saltos altos pretos brilhantes e envolve suas pernas longas e esbeltas em meias pretas translúcidas. Semelhante a um collant preto, a roupa destacava as linhas de seu corpo, enquanto o peito fazia um vale firme e modesto. Algemas brancas acentuavam seus pulsos e seu pescoço era adornado por uma gravata borboleta preta.",
-        "rent": {
-          "period": "Ao dia",
-          "price": 800
-        },
-        "types": "girl",
-        "thumbnail": "https://i.pinimg.com/236x/09/e8/77/09e87743de5595075d1a3ebeb255f15e.jpg",
-        "details": [
-          {
-            "type": "height",
-            "name": "165cm"
-          },
-          {
-            "type": "hair",
-            "name": "Liso Castanho"
-          },
-          {
-            "type": "waist",
-            "name": "52cm"
-          },
-          {
-            "type": "eyes",
-            "name": "Azul-púrpura"
-          },
-          {
-            "type": "bust",
-            "name": "80cm"
-          },
-          {
-            "type": "butt",
-            "name": "Média"
-          }
-        ],
-        "photos": [
-          "https://i.pinimg.com/236x/09/e8/77/09e87743de5595075d1a3ebeb255f15e.jpg",
-          "https://i.pinimg.com/564x/88/85/6d/88856dafe2e3288452034d88f8eca1e0.jpg",
-          "https://i.pinimg.com/564x/cb/27/c1/cb27c111cad768a2dd8ceb59c407c60e.jpg"
-        ]
-      },
-      "startDate": "15/12/2022",
-      "endDate": "18/12/2022",
-      "id": 2
-    },
-    {
-      "user_id": 1,
-      "girl": {
-        "id": "508e7193-0078-4615-9071-920b59038fda",
-        "brand": "Kaguya",
-        "name": "Hayasaka Ai",
-        "about": "Ai é uma linda e jovem garota com cabelos loiros que geralmente são amarrados no lado esquerdo da cabeça com um scrunchie azul e olhos azuis. Ela altera sua aparência e escolha de roupas para se adequar a diferentes papéis e realizar seus deveres como manobrista de Kaguya. Ela usa uma roupa de empregada ao cuidar da casa Shinomiya.",
-        "rent": {
-          "period": "Ao dia",
-          "price": 800
-        },
-        "types": "girl",
-        "thumbnail": "https://i.pinimg.com/564x/3d/0d/8d/3d0d8dd804439d6c429aa7363f7c70a4.jpg",
-        "details": [
-          {
-            "type": "height",
-            "name": "162cm"
-          },
-          {
-            "type": "hair",
-            "name": "Loiro"
-          },
-          {
-            "type": "waist",
-            "name": "75cm"
-          },
-          {
-            "type": "eyes",
-            "name": "Azul"
-          },
-          {
-            "type": "bust",
-            "name": "63cm"
-          },
-          {
-            "type": "butt",
-            "name": "Pequena"
-          }
-        ],
-        "photos": [
-          "https://i.pinimg.com/564x/3d/0d/8d/3d0d8dd804439d6c429aa7363f7c70a4.jpg",
-          "https://i.pinimg.com/564x/e7/2a/e2/e72ae20c500225d2a36d05b64d83a425.jpg",
-          "https://i.pinimg.com/564x/6a/12/ae/6a12ae928feb3d0ec74a7df568537967.jpg"
-        ]
-      },
-      "startDate": "10/10/2022",
-      "endDate": "12/10/2022",
-      "id": 3
-    },
-    {
-      "user_id": 1,
-      "girl": {
-        "id": "535e8de8-721b-4bac-8b72-7d29be7da467",
-        "brand": "Kanojo",
-        "name": "Mizuhara",
-        "about": "Chizuru tem cabelos castanhos na altura da cintura que são mais notavelmente amarrados com franja pendurada no lado direito e olhos castanhos claros. Ao posar como uma estudante diligente, ela usa óculos, um acessório de borboleta e ostenta o cabelo trançado duplo. Mais tarde é revelado que ela tem problemas de visão e usa um par de lentes de contato quando não está saindo com seus amigos. Sua apresentação é representada como sendo uma madonna, possuir uma beleza que só se pode sonhar em ter, roupas leves, maquiagem e acessórios.",
-        "rent": {
-          "period": "Ao dia",
-          "price": 500
-        },
-        "types": "girl",
-        "thumbnail": "https://64.media.tumblr.com/0f18a9079f39b8fb14c9d0677139a654/49952d61b86e3226-49/s1280x1920/cc2b62044b8d6a3147466710000d2241d82afed1.jpg",
-        "details": [
-          {
-            "type": "height",
-            "name": "160cm"
-          },
-          {
-            "type": "hair",
-            "name": "Liso Castanho"
-          },
-          {
-            "type": "waist",
-            "name": "62cm"
-          },
-          {
-            "type": "eyes",
-            "name": "Castanhos"
-          },
-          {
-            "type": "bust",
-            "name": "85cm"
-          },
-          {
-            "type": "butt",
-            "name": "Média"
-          }
-        ],
-        "photos": [
-          "https://64.media.tumblr.com/0f18a9079f39b8fb14c9d0677139a654/49952d61b86e3226-49/s1280x1920/cc2b62044b8d6a3147466710000d2241d82afed1.jpg",
-          "https://i.pinimg.com/564x/69/e4/4f/69e44f901ba0c8403ed9350ffd35bac2.jpg",
-          "https://i.pinimg.com/564x/2f/66/6e/2f666e2dc60ddce28d8dd1698fc98e35.jpg"
-        ]
-      },
-      "startDate": "28/10/2022",
-      "endDate": "30/10/2022",
-      "id": 4
     },
     {
       "user_id": 1,
@@ -600,107 +463,9 @@
           "https://i.pinimg.com/564x/64/e8/7e/64e87ee2178ae7ada9615d1f58e8e1f4.jpg"
         ]
       },
-      "startDate": "01/12/2022",
-      "endDate": "04/12/2022",
-      "id": 5
-    },
-    {
-      "user_id": 1,
-      "girl": {
-        "id": "49983f6c-a46a-4dfd-a86e-425b8c72e086",
-        "brand": "One Piece",
-        "name": "Nami",
-        "about": "Nami é uma jovem esbelta de estatura média com cabelos laranja e olhos castanhos. A maioria das pessoas a considera muito atraente ou mesmo bonita. Ela tem uma tatuagem preta (azul no anime) no ombro esquerdo, que representa mikan, e cata-ventos (uma homenagem a Bell-mère, Nojiko e Genzo , respectivamente), onde ela costumava ter uma tatuagem por ser membro da tripulação de Arlong. Seu físico geral amadurece lentamente ao longo da série e, de repente, durante o timeskip (embora isso seja provavelmente uma simples mudança no estilo da arte). Sua moda muda frequentemente, assim como seu estilo de cabelo.",
-        "rent": {
-          "period": "Ao dia",
-          "price": 1500
-        },
-        "types": "girl",
-        "thumbnail": "https://i.pinimg.com/564x/92/2b/5e/922b5e87e5c75e0e3761d244184f430e.jpg",
-        "details": [
-          {
-            "type": "height",
-            "name": "170cm"
-          },
-          {
-            "type": "hair",
-            "name": "Cabelos laranja"
-          },
-          {
-            "type": "waist",
-            "name": "58cm"
-          },
-          {
-            "type": "eyes",
-            "name": "Castanhos"
-          },
-          {
-            "type": "bust",
-            "name": "98cm"
-          },
-          {
-            "type": "butt",
-            "name": "Grande"
-          }
-        ],
-        "photos": [
-          "https://i.pinimg.com/564x/92/2b/5e/922b5e87e5c75e0e3761d244184f430e.jpg",
-          "https://i.pinimg.com/564x/b5/a6/2d/b5a62d26faa4b4922da9693c67f48177.jpg",
-          "https://i.pinimg.com/564x/ff/35/bb/ff35bb59b522df30bb68012ca5091e3d.jpg"
-        ]
-      },
-      "startDate": "01/10/2022",
-      "endDate": "04/10/2022",
-      "id": 5
-    },
-    {
-      "user_id": 1,
-      "girl": {
-        "id": "59626707-88c5-4877-9350-07f372c0905a",
-        "brand": "Darling",
-        "name": "Zero Two",
-        "about": "Zero Two tem uma figura esbelta e atlética, ela é a garota mais alta do esquadrão e ainda mais alta que a maioria dos meninos também. Ela tem longos cabelos rosa na altura da cintura com franja reta cobrindo a testa e um par de chifres vermelhos na cabeça e uma faixa de cabeça branca sobre os chifres. Ela tem olhos turquesa afiados com anéis ao redor das pupilas e marcas vermelho-rosadas no canthi. O conjunto completo de Zero Two é composto por um boné militar branco com sobretudo e botas combinando.",
-        "rent": {
-          "period": "Ao dia",
-          "price": 1200
-        },
-        "types": "girl",
-        "thumbnail": "https://i.pinimg.com/564x/34/38/ca/3438ca3643795f3f88f58963e09c2605.jpg",
-        "details": [
-          {
-            "type": "height",
-            "name": "170cm"
-          },
-          {
-            "type": "hair",
-            "name": "Rosa"
-          },
-          {
-            "type": "waist",
-            "name": "64cm"
-          },
-          {
-            "type": "eyes",
-            "name": "Azul"
-          },
-          {
-            "type": "bust",
-            "name": "80cm"
-          },
-          {
-            "type": "butt",
-            "name": "Média"
-          }
-        ],
-        "photos": [
-          "https://i.pinimg.com/564x/34/38/ca/3438ca3643795f3f88f58963e09c2605.jpg",
-          "https://i.pinimg.com/564x/22/04/aa/2204aa55657d5a13ef1fd8b2bcc66cfc.jpg",
-          "https://i.pinimg.com/564x/25/d0/2e/25d02edba17c5a3dd173d21cfc8a5eb3.jpg"
-        ]
-      },
-      "startDate": "01/11/2022",
-      "endDate": "04/11/2022",
-      "id": 5
+      "startDate": "27/10/2022",
+      "endDate": "29/10/2022",
+      "id": 2
     }
   ]
 }

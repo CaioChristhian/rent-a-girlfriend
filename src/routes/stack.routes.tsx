@@ -6,6 +6,7 @@ import { WaifuDetails } from '../screens/WaifuDetails';
 import { Scheduling } from '../screens/Scheduling';
 import { SchedulingDetails } from '../screens/SchedulingDetails';
 import { SchedulingComplete } from '../screens/SchedulingComplete';
+import { MyGirls } from '../screens/MyGirls';
 import { PropsNavigationStack } from './models';
 
 const { Navigator, Screen } = createNativeStackNavigator<PropsNavigationStack>();
@@ -32,6 +33,10 @@ export function StackRoutes() {
       <Screen 
         name='SchedulingComplete'
         component={SchedulingComplete}
+      />
+      <Screen 
+        name='MyGirls'
+        component={MyGirls}
       />
     </Navigator>
   )
