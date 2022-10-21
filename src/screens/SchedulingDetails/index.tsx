@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from 'react';
+import { format } from 'date-fns';
 import { useTheme } from 'styled-components';
 import { Feather } from '@expo/vector-icons';
 import { Alert, StatusBar } from 'react-native';
 import { RFValue } from 'react-native-responsive-fontsize';
 import { CommonActions, useNavigation, useRoute } from '@react-navigation/native';
 
+import { getPlatformDate } from '../../utils/getPlatformDate';
+import { api } from '../../services/api';
 import { PropsStack } from '../../routes/models';
 import { Accessory } from '../../components/Accessory';
 import { BackButton } from '../../components/BackButton';
@@ -38,9 +41,6 @@ import {
   RentalPriceQuota,
   RentalPriceTotal
 } from './styles';
-import { format } from 'date-fns';
-import { getPlatformDate } from '../../utils/getPlatformDate';
-import { api } from '../../services/api';
 
 interface Params {
   girl: GirlDTO;
@@ -111,6 +111,7 @@ export function SchedulingDetails(){
         <ImageSlider imagesUrl={girl.photos} />
       </GirlImages>
 
+     
       <Content>
         <Details>
           <Description>
@@ -166,7 +167,7 @@ export function SchedulingDetails(){
           </RentalPriceDetails>
         </RentalPrice>
       </Content>
-
+    
       <Footer>
         <Button title='Alugar agora' color={theme.colors.success} onPress={() => handleConfirmSchedulingDetails()} />
       </Footer>

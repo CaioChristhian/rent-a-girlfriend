@@ -38,7 +38,7 @@ export const WaifuList = styled(FlatList<GirlDTO>).attrs({
   showsVerticalScrollIndicator: false,
 })``;
 
-export const MyCarsButton = styled(RectButton)`
+export const MyGirlsButton = styled(RectButton)`
   width: 60px;
   height: 60px;
 

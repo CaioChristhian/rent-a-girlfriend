@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
+import { StatusBar } from 'react-native';
 import { useTheme } from 'styled-components';
 import { CommonActions, useNavigation, useRoute } from '@react-navigation/native';
 import { format } from 'date-fns';
-import { Alert } from 'react-native';
 
 import { GirlDTO } from '../../dtos/GirlDTO';
 import { getPlatformDate } from '../../utils/getPlatformDate';
@@ -50,11 +50,7 @@ export function Scheduling(){
   const { girl } = route.params as Params;
 
   function handleConfirmScheduling() {
-    if(!rentalPeriod.start || !rentalPeriod.end) {
-      Alert.alert('Selecione uma data para alugar :)')
-    } else {
-      navigation.navigate('SchedulingDetails', { name: 'SchedulingDetails', girl: girl, dates: Object.keys(markedDate) })
-    }
+    navigation.navigate('SchedulingDetails', { name: 'SchedulingDetails', girl: girl, dates: Object.keys(markedDate) }) 
   }
 
   function handleBack() {
@@ -88,6 +84,11 @@ export function Scheduling(){
   return (
     <Container>
       <Header>
+        <StatusBar 
+          barStyle='light-content'
+          backgroundColor='transparent'
+          translucent
+        />
         <BackButton 
           onPress={handleBack}
           color={theme.colors.shape}
@@ -130,7 +131,11 @@ export function Scheduling(){
       </Content>
 
       <Footer>
-        <Button title="Confirmar" onPress={() => handleConfirmScheduling()} />
+        <Button 
+          title="Confirmar" 
+          onPress={() => handleConfirmScheduling()} 
+          enabled={!!rentalPeriod.startFormatted}
+        />
       </Footer>
     </Container>
   );

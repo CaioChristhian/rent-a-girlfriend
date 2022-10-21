@@ -18,7 +18,7 @@ import {
   Container, Header,
   TotalWaifus, HeaderContent,
   WaifuList,
-  MyCarsButton
+  MyGirlsButton
 } from './styles';
 
 export function Home(){
@@ -77,13 +77,13 @@ export function Home(){
         /> 
       }
 
-      <MyCarsButton onPress={handleOpenMyGirls}>
+      <MyGirlsButton onPress={handleOpenMyGirls}>
         <MaterialCommunityIcons 
           name="face-woman-shimmer" 
           size={32}
           color={theme.colors.shape}
           />
-      </MyCarsButton>
+      </MyGirlsButton>
     </Container>
   );
 }

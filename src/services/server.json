@@ -339,7 +339,10 @@
       "unavailable_dates": [
         "2022-06-19",
         "2022-06-20",
-        "2022-06-21"
+        "2022-06-21",
+        "2022-10-21",
+        "2022-10-22",
+        "2022-10-23"
       ]
     },
     {
@@ -466,6 +469,55 @@
       "startDate": "27/10/2022",
       "endDate": "29/10/2022",
       "id": 2
+    },
+    {
+      "user_id": 1,
+      "girl": {
+        "id": "49983f6c-a46a-4dfd-a86e-425b8c72e086",
+        "brand": "One Piece",
+        "name": "Nami",
+        "about": "Nami é uma jovem esbelta de estatura média com cabelos laranja e olhos castanhos. A maioria das pessoas a considera muito atraente ou mesmo bonita. Ela tem uma tatuagem preta (azul no anime) no ombro esquerdo, que representa mikan, e cata-ventos (uma homenagem a Bell-mère, Nojiko e Genzo , respectivamente), onde ela costumava ter uma tatuagem por ser membro da tripulação de Arlong. Seu físico geral amadurece lentamente ao longo da série e, de repente, durante o timeskip (embora isso seja provavelmente uma simples mudança no estilo da arte). Sua moda muda frequentemente, assim como seu estilo de cabelo.",
+        "rent": {
+          "period": "Ao dia",
+          "price": 1500
+        },
+        "types": "girl",
+        "thumbnail": "https://i.pinimg.com/564x/92/2b/5e/922b5e87e5c75e0e3761d244184f430e.jpg",
+        "details": [
+          {
+            "type": "height",
+            "name": "170cm"
+          },
+          {
+            "type": "hair",
+            "name": "Cabelos laranja"
+          },
+          {
+            "type": "waist",
+            "name": "58cm"
+          },
+          {
+            "type": "eyes",
+            "name": "Castanhos"
+          },
+          {
+            "type": "bust",
+            "name": "98cm"
+          },
+          {
+            "type": "butt",
+            "name": "Grande"
+          }
+        ],
+        "photos": [
+          "https://i.pinimg.com/564x/92/2b/5e/922b5e87e5c75e0e3761d244184f430e.jpg",
+          "https://i.pinimg.com/564x/b5/a6/2d/b5a62d26faa4b4922da9693c67f48177.jpg",
+          "https://i.pinimg.com/564x/ff/35/bb/ff35bb59b522df30bb68012ca5091e3d.jpg"
+        ]
+      },
+      "startDate": "21/10/2022",
+      "endDate": "23/10/2022",
+      "id": 3
     }
   ]
 }
