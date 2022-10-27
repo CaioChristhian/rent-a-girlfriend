@@ -7,13 +7,18 @@ import { Scheduling } from '../screens/Scheduling';
 import { SchedulingDetails } from '../screens/SchedulingDetails';
 import { SchedulingComplete } from '../screens/SchedulingComplete';
 import { MyGirls } from '../screens/MyGirls';
+import { SignIn } from '../screens/SignIn';
 import { PropsNavigationStack } from './models';
 
 const { Navigator, Screen } = createNativeStackNavigator<PropsNavigationStack>();
 
 export function StackRoutes() {
   return (
-    <Navigator screenOptions={{ headerShown: false }}>
+    <Navigator screenOptions={{ headerShown: false }} initialRouteName="SignIn">
+      <Screen 
+        name='SignIn'
+        component={SignIn}
+      />
       <Screen 
         name='Home'
         component={Home}
