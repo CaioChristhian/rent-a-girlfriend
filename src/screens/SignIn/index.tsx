@@ -1,9 +1,10 @@
 import React from 'react';
-import { StatusBar } from 'react-native';
+import { StatusBar, Keyboard } from 'react-native';
 import { useTheme } from 'styled-components';
 
 import { Button } from '../../components/Button';
 import { Input } from '../../components/Input';
+import { InputPassword } from '../../components/InputPassword';
 
 import {
   Container,
@@ -35,7 +36,18 @@ export function SignIn(){
       </Header>
 
       <Form>
-        <Input iconName='mail' />
+        <Input 
+          iconName='mail' 
+          placeholder='E-mail'
+          keyboardType='email-address'
+          autoCorrect={false}
+          autoCapitalize='none'
+        />
+
+        <InputPassword 
+          iconName='lock'
+          placeholder='Senha'
+        />
       </Form>
 
       <Footer>
