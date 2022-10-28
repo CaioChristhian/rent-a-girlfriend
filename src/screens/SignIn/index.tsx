@@ -6,9 +6,11 @@ import {
   Keyboard,
   Alert
 } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 import { useTheme } from 'styled-components';
 import * as Yup from 'yup';
 
+import { PropsStack } from '../../routes/models';
 import { Button } from '../../components/Button';
 import { Input } from '../../components/Input';
 import { InputPassword } from '../../components/InputPassword';
@@ -23,7 +25,9 @@ import {
 } from './styles';
 
 export function SignIn(){
+  const navigation = useNavigation<PropsStack>()
   const theme = useTheme();
+
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -52,6 +56,10 @@ export function SignIn(){
       }
     }
     
+  }
+
+  function handleNewAccount() {
+    navigation.navigate('SignUpFirstStep', { name: 'SignUpFirstStep' })
   }
 
   return (
@@ -102,7 +110,7 @@ export function SignIn(){
 
             <Button 
               title='Criar conta gratuita'
-              onPress={() => {}}
+              onPress={handleNewAccount}
               enabled={true}
               loading={false}
               color={theme.colors.background_primary}

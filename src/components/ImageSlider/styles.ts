@@ -1,5 +1,5 @@
 import styled from 'styled-components/native';
-import { Dimensions } from 'react-native';
+import { FlatList, Dimensions } from 'react-native';
 
 interface ImageIndexProps {
   active: boolean;
@@ -39,3 +39,8 @@ export const GirlImage = styled.Image`
   height: 150px;
   border-radius: 8px;
 `;
+
+export const CardSlider = styled(FlatList<string>).attrs({
+  horizontal: true,
+  showsHorizontalScrollIndicator: false
+})``;
