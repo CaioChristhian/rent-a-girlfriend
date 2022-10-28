@@ -67,16 +67,16 @@ export function SignIn(){
             <Button 
               title='Login'
               onPress={() => {}}
-              enabled={false}
+              enabled={true}
               loading={false}
             />
 
             <Button 
               title='Criar conta gratuita'
               onPress={() => {}}
-              enabled={false}
+              enabled={true}
               loading={false}
-              color={theme.colors.background_secondary}
+              color={theme.colors.background_primary}
               light
             />
           </Footer>
