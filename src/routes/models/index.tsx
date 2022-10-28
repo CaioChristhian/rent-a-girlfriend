@@ -30,6 +30,9 @@ export type PropsNavigationStack = {
   SignUpFirstStep: {
     name: string;
   }
+  SignUpSecondStep: {
+    name: string;
+  }
 }
 
 export type PropsStack = NativeStackNavigationProp<PropsNavigationStack>

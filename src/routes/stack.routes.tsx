@@ -9,6 +9,7 @@ import { SchedulingComplete } from '../screens/SchedulingComplete';
 import { MyGirls } from '../screens/MyGirls';
 import { SignIn } from '../screens/SignIn';
 import { SignUpFirstStep } from '../screens/SignUp/SignUpFirstStep';
+import { SignUpSecondStep } from '../screens/SignUp/SignUpSecondStep';
 
 import { PropsNavigationStack } from './models';
 
@@ -24,6 +25,10 @@ export function StackRoutes() {
       <Screen 
         name='SignUpFirstStep'
         component={SignUpFirstStep}
+      />
+      <Screen 
+        name='SignUpSecondStep'
+        component={SignUpSecondStep}
       />
       <Screen 
         name='Home'
