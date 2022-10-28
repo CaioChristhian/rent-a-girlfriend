@@ -16,7 +16,7 @@ const { Navigator, Screen } = createNativeStackNavigator<PropsNavigationStack>()
 
 export function StackRoutes() {
   return (
-    <Navigator screenOptions={{ headerShown: false }} initialRouteName="Home">
+    <Navigator screenOptions={{ headerShown: false }} initialRouteName="SignIn">
       <Screen 
         name='SignIn'
         component={SignIn}
