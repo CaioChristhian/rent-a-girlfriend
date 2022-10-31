@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { 
   StatusBar, 
   KeyboardAvoidingView,
   TouchableWithoutFeedback,
   Keyboard,
+  Alert,
 } from 'react-native';
 import { useTheme } from 'styled-components';
-import { CommonActions, useNavigation } from '@react-navigation/native';
+import { CommonActions, useNavigation, useRoute } from '@react-navigation/native';
 
 import { Button } from '../../../components/Button';
 import { InputPassword } from '../../../components/InputPassword';
@@ -23,13 +24,36 @@ import {
   FormTitle
 } from './styles';
 
+interface Params {
+  user: {
+    name: string;
+    email: string;
+    cpf: string;
+  }
+}
 
 export function SignUpSecondStep(){
+  const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
+
   const theme = useTheme();
   const navigation = useNavigation();
+  const route = useRoute();
+
+  const { user } = route.params as Params;
 
   function handleBack() {
     navigation.dispatch(CommonActions.goBack())
+  }
+
+  function handleRegister() {
+    if(!password || !confirmPassword) {
+      return Alert.alert('Informe a senha e a confirmação.')
+    }
+    if(password != confirmPassword) {
+      return Alert.alert('As senhas não são iguais.')
+    }
+
   }
 
   return (
@@ -63,16 +87,21 @@ export function SignUpSecondStep(){
             <InputPassword 
               iconName='lock'
               placeholder='Senha'
+              onChangeText={setPassword}
+              value={password}
             />
             <InputPassword 
               iconName='lock'
               placeholder='Repetir Senha'
+              onChangeText={setConfirmPassword}
+              value={confirmPassword}
             />
           </Form>
 
           <Button 
             color={theme.colors.success}
-            title='Cadastrar' 
+            title='Cadastrar'
+            onPress={handleRegister}
           />
         </Container>
       </TouchableWithoutFeedback>

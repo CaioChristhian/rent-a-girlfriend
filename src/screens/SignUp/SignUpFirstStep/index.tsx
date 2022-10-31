@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { 
   StatusBar, 
   KeyboardAvoidingView,
   TouchableWithoutFeedback,
   Keyboard,
+  Alert,
 } from 'react-native';
+import * as Yup from 'yup';
 import { CommonActions, useNavigation } from '@react-navigation/native';
 
 import { BackButton } from '../../../components/BackButton';
@@ -25,14 +27,37 @@ import { Input } from '../../../components/Input';
 import { Button } from '../../../components/Button';
 
 export function SignUpFirstStep(){
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [cpf, setCPF] = useState('');
+
   const navigation = useNavigation<PropsStack>();
 
   function handleBack() {
     navigation.dispatch(CommonActions.goBack())
   }
 
-  function handleNextStep() {
-    navigation.navigate('SignUpSecondStep', { name: 'SignUpSecondStep' })
+  async function handleNextStep() {
+    try {
+      const schema = Yup.object().shape({
+        cpf: Yup.string()
+        .required('CPF é obrigatório'),
+        email: Yup.string()
+        .email('E-mail inválido')
+        .required('E-mail é obrigatório'),
+        name: Yup.string()
+        .required('Nome é obrigatório')
+      })
+
+      const data = { name, email, cpf }
+      await schema.validate(data);
+
+      navigation.navigate('SignUpSecondStep', { name: 'SignUpSecondStep', user: data })
+    } catch (error) {
+      if(error instanceof Yup.ValidationError) {
+        return Alert.alert('Opa', error.message)
+      }
+    }
   }
 
   return (
@@ -65,16 +90,22 @@ export function SignUpFirstStep(){
             <Input 
               iconName='user'
               placeholder='Nome'
+              onChangeText={setName}
+              value={name}
             />
             <Input 
               iconName='mail'
               placeholder='E-mail'
               keyboardType='email-address'
+              onChangeText={setEmail}
+              value={email}
             />
             <Input 
               iconName='credit-card'
               placeholder='CPF'
               keyboardType='numeric'
+              onChangeText={setCPF}
+              value={cpf}
             />
           </Form>
 

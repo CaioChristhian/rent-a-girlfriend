@@ -15,3 +15,4 @@ export interface GirlDTO {
   }[];
   photos: string[];
 }
+

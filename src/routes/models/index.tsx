@@ -1,5 +1,6 @@
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { GirlDTO } from '../../dtos/GirlDTO';
+import { UserDTO } from '../../dtos/UserDTO';
 
 export type PropsNavigationStack = {
   Home: {
@@ -32,6 +33,7 @@ export type PropsNavigationStack = {
   }
   SignUpSecondStep: {
     name: string;
+    user: UserDTO;
   }
 }
 
