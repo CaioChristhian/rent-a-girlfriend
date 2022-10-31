@@ -35,6 +35,11 @@ export type PropsNavigationStack = {
     name: string;
     user: UserDTO;
   }
+  Confirmation?: {
+    title?: string;
+    message?: string;
+    nextScreenRoute?: string;
+  }
 }
 
 export type PropsStack = NativeStackNavigationProp<PropsNavigationStack>

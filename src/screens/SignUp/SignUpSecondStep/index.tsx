@@ -13,6 +13,7 @@ import { Button } from '../../../components/Button';
 import { InputPassword } from '../../../components/InputPassword';
 import { BackButton } from '../../../components/BackButton';
 import { Bullet } from '../../../components/Bullet';
+import { Confirmation } from '../../Confirmation';
 
 import {
   Container,
@@ -23,6 +24,7 @@ import {
   Form,
   FormTitle
 } from './styles';
+import { PropsStack } from '../../../routes/models';
 
 interface Params {
   user: {
@@ -37,7 +39,7 @@ export function SignUpSecondStep(){
   const [confirmPassword, setConfirmPassword] = useState('');
 
   const theme = useTheme();
-  const navigation = useNavigation();
+  const navigation = useNavigation<PropsStack>();
   const route = useRoute();
 
   const { user } = route.params as Params;
@@ -54,6 +56,11 @@ export function SignUpSecondStep(){
       return Alert.alert('As senhas não são iguais.')
     }
 
+    navigation.navigate('Confirmation', { 
+      title: 'Conta Criada!',
+      message: `Agora é só fazer login\ne aproveitar.`,
+      nextScreenRoute: 'SignIn'
+    })
   }
 
   return (

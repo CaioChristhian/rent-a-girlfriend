@@ -82,7 +82,13 @@ export function SchedulingDetails(){
       id: girl.id,
       unavailable_dates
     })
-    .then(() =>  navigation.navigate('SchedulingComplete', { name: 'SchedulingComplete' }))
+    .then(() =>  {
+      navigation.navigate('Confirmation', {
+        title: 'Namorada Alugada!',
+        message: `Tenha um ótimo encontro,\n agora apenas aguarde a resposta da\n sua namorada de aluguel.`,
+        nextScreenRoute: 'Home'
+      })
+    })
     .catch(() => {
       setLoading(false);
       Alert.alert('Não foi possível confirmar o agendamento.');

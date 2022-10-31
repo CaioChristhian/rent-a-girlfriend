@@ -5,7 +5,7 @@ import { Home } from '../screens/Home';
 import { WaifuDetails } from '../screens/WaifuDetails';
 import { Scheduling } from '../screens/Scheduling';
 import { SchedulingDetails } from '../screens/SchedulingDetails';
-import { SchedulingComplete } from '../screens/SchedulingComplete';
+import { Confirmation } from '../screens/Confirmation';
 import { MyGirls } from '../screens/MyGirls';
 import { SignIn } from '../screens/SignIn';
 import { SignUpFirstStep } from '../screens/SignUp/SignUpFirstStep';
@@ -47,8 +47,8 @@ export function StackRoutes() {
         component={SchedulingDetails}
       />
       <Screen 
-        name='SchedulingComplete'
-        component={SchedulingComplete}
+        name='Confirmation'
+        component={Confirmation}
       />
       <Screen 
         name='MyGirls'

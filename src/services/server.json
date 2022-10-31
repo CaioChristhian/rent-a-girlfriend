@@ -368,7 +368,12 @@
         "2022-10-20",
         "2022-10-21",
         "2022-10-22",
-        "2022-10-29"
+        "2022-10-29",
+        "2022-11-25",
+        "2022-11-26",
+        "2022-11-27",
+        "2022-11-28",
+        "2022-10-31"
       ]
     },
     {
@@ -922,6 +927,104 @@
       "startDate": "24/10/2022",
       "endDate": "26/10/2022",
       "id": 11
+    },
+    {
+      "user_id": 1,
+      "girl": {
+        "id": "508e7193-0078-4615-9071-920b59038fda",
+        "brand": "Kaguya",
+        "name": "Hayasaka Ai",
+        "about": "Ai é uma linda e jovem garota com cabelos loiros que geralmente são amarrados no lado esquerdo da cabeça com um scrunchie azul e olhos azuis. Ela altera sua aparência e escolha de roupas para se adequar a diferentes papéis e realizar seus deveres como manobrista de Kaguya. Ela usa uma roupa de empregada ao cuidar da casa Shinomiya.",
+        "rent": {
+          "period": "Ao dia",
+          "price": 800
+        },
+        "types": "girl",
+        "thumbnail": "https://i.pinimg.com/564x/3d/0d/8d/3d0d8dd804439d6c429aa7363f7c70a4.jpg",
+        "details": [
+          {
+            "type": "height",
+            "name": "162cm"
+          },
+          {
+            "type": "hair",
+            "name": "Loiro"
+          },
+          {
+            "type": "waist",
+            "name": "75cm"
+          },
+          {
+            "type": "eyes",
+            "name": "Azul"
+          },
+          {
+            "type": "bust",
+            "name": "63cm"
+          },
+          {
+            "type": "butt",
+            "name": "Pequena"
+          }
+        ],
+        "photos": [
+          "https://i.pinimg.com/564x/3d/0d/8d/3d0d8dd804439d6c429aa7363f7c70a4.jpg",
+          "https://i.pinimg.com/564x/e7/2a/e2/e72ae20c500225d2a36d05b64d83a425.jpg",
+          "https://i.pinimg.com/564x/6a/12/ae/6a12ae928feb3d0ec74a7df568537967.jpg"
+        ]
+      },
+      "startDate": "25/11/2022",
+      "endDate": "28/11/2022",
+      "id": 12
+    },
+    {
+      "user_id": 1,
+      "girl": {
+        "id": "508e7193-0078-4615-9071-920b59038fda",
+        "brand": "Kaguya",
+        "name": "Hayasaka Ai",
+        "about": "Ai é uma linda e jovem garota com cabelos loiros que geralmente são amarrados no lado esquerdo da cabeça com um scrunchie azul e olhos azuis. Ela altera sua aparência e escolha de roupas para se adequar a diferentes papéis e realizar seus deveres como manobrista de Kaguya. Ela usa uma roupa de empregada ao cuidar da casa Shinomiya.",
+        "rent": {
+          "period": "Ao dia",
+          "price": 800
+        },
+        "types": "girl",
+        "thumbnail": "https://i.pinimg.com/564x/3d/0d/8d/3d0d8dd804439d6c429aa7363f7c70a4.jpg",
+        "details": [
+          {
+            "type": "height",
+            "name": "162cm"
+          },
+          {
+            "type": "hair",
+            "name": "Loiro"
+          },
+          {
+            "type": "waist",
+            "name": "75cm"
+          },
+          {
+            "type": "eyes",
+            "name": "Azul"
+          },
+          {
+            "type": "bust",
+            "name": "63cm"
+          },
+          {
+            "type": "butt",
+            "name": "Pequena"
+          }
+        ],
+        "photos": [
+          "https://i.pinimg.com/564x/3d/0d/8d/3d0d8dd804439d6c429aa7363f7c70a4.jpg",
+          "https://i.pinimg.com/564x/e7/2a/e2/e72ae20c500225d2a36d05b64d83a425.jpg",
+          "https://i.pinimg.com/564x/6a/12/ae/6a12ae928feb3d0ec74a7df568537967.jpg"
+        ]
+      },
+      "startDate": "31/10/2022",
+      "endDate": "31/10/2022",
+      "id": 13
     }
   ]
 }
