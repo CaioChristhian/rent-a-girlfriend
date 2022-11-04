@@ -13,7 +13,8 @@ import { Button } from '../../../components/Button';
 import { InputPassword } from '../../../components/InputPassword';
 import { BackButton } from '../../../components/BackButton';
 import { Bullet } from '../../../components/Bullet';
-import { Confirmation } from '../../Confirmation';
+import { PropsStack } from '../../../routes/models';
+import { api } from '../../../services/api';
 
 import {
   Container,
@@ -24,7 +25,7 @@ import {
   Form,
   FormTitle
 } from './styles';
-import { PropsStack } from '../../../routes/models';
+
 
 interface Params {
   user: {
@@ -48,7 +49,7 @@ export function SignUpSecondStep(){
     navigation.dispatch(CommonActions.goBack())
   }
 
-  function handleRegister() {
+  async function handleRegister() {
     if(!password || !confirmPassword) {
       return Alert.alert('Informe a senha e a confirmação.')
     }
@@ -56,10 +57,21 @@ export function SignUpSecondStep(){
       return Alert.alert('As senhas não são iguais.')
     }
 
-    navigation.navigate('Confirmation', { 
-      title: 'Conta Criada!',
-      message: `Agora é só fazer login\ne aproveitar.`,
-      nextScreenRoute: 'SignIn'
+    await api.post('/users', {
+      name: user.name,
+      email: user.email,
+      cpf: user.cpf,
+      password
+    })
+    .then(() => {
+      navigation.navigate('Confirmation', { 
+        title: 'Conta Criada!',
+        message: `Agora é só fazer login\ne aproveitar.`,
+        nextScreenRoute: 'SignIn'
+      })
+    })
+    .catch(() => {
+      Alert.alert('Opa', 'Não foi possível cadastrar :/')
     })
   }
 
