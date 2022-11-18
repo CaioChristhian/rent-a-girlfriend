@@ -68,8 +68,8 @@ export function WaifuDetails(){
           </Description>
 
           <Rent>
-            <Period>{girl.rent.period}</Period>
-            <Price>R$ {girl.rent.price}</Price>
+            <Period>{girl.period}</Period>
+            <Price>R$ {girl.price}</Price>
           </Rent>
         </Details>
 

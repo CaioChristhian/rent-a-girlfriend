@@ -2,8 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { StatusBar } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { RFValue } from 'react-native-responsive-fontsize';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
-import { useTheme } from 'styled-components';
+import { MaterialCommunityIcons } from '@expo/vector-icons'; //name="face-woman-shimmer"
 
 import Logo from '../../assets/logo.svg';
 
@@ -17,22 +16,16 @@ import { Load } from '../../components/Load';
 import {
   Container, Header,
   TotalWaifus, HeaderContent,
-  WaifuList,
-  MyGirlsButton
+  WaifuList
 } from './styles';
 
 export function Home(){
-  const theme = useTheme()
   const navigation = useNavigation<PropsStack>()
   const [cars, setCars] = useState<GirlDTO[]>([])
   const [load, setLoad] = useState(true)
 
   function handleWaifuDetails(girl: GirlDTO) {
     navigation.navigate("WaifuDetails", { name: 'WaifuDetails', girl: girl })
-  }
-
-  function handleOpenMyGirls() {
-    navigation.navigate("MyGirls", { name: 'MyGirls' })
   }
 
   useEffect(() => {
@@ -76,14 +69,6 @@ export function Home(){
           renderItem={({item}) => <Waifu data={item} onPress={() => handleWaifuDetails(item)} />}
         /> 
       }
-
-      <MyGirlsButton onPress={handleOpenMyGirls}>
-        <MaterialCommunityIcons 
-          name="face-woman-shimmer" 
-          size={32}
-          color={theme.colors.shape}
-          />
-      </MyGirlsButton>
     </Container>
   );
 }

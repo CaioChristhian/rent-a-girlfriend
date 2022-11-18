@@ -3,16 +3,18 @@ export interface GirlDTO {
   brand: string;
   name: string;
   about: string;
-  rent: {
-    period: string;
-    price: number;
-  };
+  period: string;
+  price: number;
   types: string;
   thumbnail: string;
   details: {
+    id: string;
     type: string;
     name: string;
   }[];
-  photos: string[];
+  photos: {
+    id: string;
+    photo: string;
+  }[];
 }
 

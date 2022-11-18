@@ -40,6 +40,12 @@ export type PropsNavigationStack = {
     message?: string;
     nextScreenRoute?: string;
   }
+  Profile: {
+    
+  }
+  Splash: {
+
+  }
 }
 
 export type PropsStack = NativeStackNavigationProp<PropsNavigationStack>

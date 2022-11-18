@@ -7,29 +7,14 @@ import { Scheduling } from '../screens/Scheduling';
 import { SchedulingDetails } from '../screens/SchedulingDetails';
 import { Confirmation } from '../screens/Confirmation';
 import { MyGirls } from '../screens/MyGirls';
-import { SignIn } from '../screens/SignIn';
-import { SignUpFirstStep } from '../screens/SignUp/SignUpFirstStep';
-import { SignUpSecondStep } from '../screens/SignUp/SignUpSecondStep';
 
 import { PropsNavigationStack } from './models';
 
 const { Navigator, Screen } = createNativeStackNavigator<PropsNavigationStack>();
 
-export function StackRoutes() {
+export function AppStackRoutes() {
   return (
-    <Navigator screenOptions={{ headerShown: false }} initialRouteName="SignIn">
-      <Screen 
-        name='SignIn'
-        component={SignIn}
-      />
-      <Screen 
-        name='SignUpFirstStep'
-        component={SignUpFirstStep}
-      />
-      <Screen 
-        name='SignUpSecondStep'
-        component={SignUpSecondStep}
-      />
+    <Navigator screenOptions={{ headerShown: false }} initialRouteName="Home">
       <Screen 
         name='Home'
         component={Home}

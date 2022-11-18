@@ -11,8 +11,13 @@ import {
   CardSlider
 } from './styles';
 
+export interface PhotoProps {
+  id: string;
+  photo: string;
+}
+
 export interface ImageSliderProps {
-  imagesUrl: string[];
+  imagesUrl: PhotoProps[];
 };
 
 interface ChangeImageProps {
@@ -32,24 +37,23 @@ export function ImageSlider({imagesUrl}: ImageSliderProps){
     <Container>
       <ImageIndexes>
         {imagesUrl.map((item, index) => (
-          <Bullet key={item} active={index === imageIndex} />
+          <Bullet key={item.id} active={index === imageIndex} />
         ))}        
       </ImageIndexes>
 
       <CardSlider 
         pagingEnabled={true}
         data={imagesUrl}
-        keyExtractor={key => key}
+        keyExtractor={item => item.id}
         renderItem={({ item }) => (
           <GirlImageWrapper>
             <GirlImage 
-              source={{ uri: item }}
+              source={{ uri: item.photo }}
             />
           </GirlImageWrapper>
         )}
         onViewableItemsChanged={indexChanged.current}
       />
-
     </Container>
   );
 }

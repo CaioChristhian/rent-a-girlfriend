@@ -25,7 +25,6 @@ import {
 
 import { Input } from '../../../components/Input';
 import { Button } from '../../../components/Button';
-import { useAuth } from '../../../hooks/auth';
 
 export function SignUpFirstStep(){
   const [name, setName] = useState('');
@@ -33,8 +32,6 @@ export function SignUpFirstStep(){
   const [cpf, setCPF] = useState('');
 
   const navigation = useNavigation<PropsStack>();
-  const { user } = useAuth();
-  console.log('usuario autenticado', user)
 
   function handleBack() {
     navigation.dispatch(CommonActions.goBack())
