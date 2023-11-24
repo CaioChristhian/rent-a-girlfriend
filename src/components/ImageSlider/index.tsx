@@ -29,29 +29,34 @@ export function ImageSlider({imagesUrl}: ImageSliderProps){
   const [imageIndex, setImageIndex] = useState(0);
 
   const indexChanged = useRef((info: ChangeImageProps) => {
-    const index = info.viewableItems[0].index!;
-    setImageIndex(index);
-  });
+    if (info.viewableItems.length > 0) {
+      const index = info.viewableItems[0].index!;
+      setImageIndex(index);
+    }
+   });
+   
+   
 
   return (
     <Container>
       <ImageIndexes>
         {imagesUrl.map((item, index) => (
-          <Bullet key={item.id} active={index === imageIndex} />
-        ))}        
+          <Bullet key={item.photo} active={index === imageIndex} />
+        ))}
       </ImageIndexes>
 
       <CardSlider 
         pagingEnabled={true}
         data={imagesUrl}
-        keyExtractor={item => item.id}
+        keyExtractor={item => item.photo}
         renderItem={({ item }) => (
           <GirlImageWrapper>
             <GirlImage 
               source={{ uri: item.photo }}
             />
           </GirlImageWrapper>
-        )}
+         )}
+         
         onViewableItemsChanged={indexChanged.current}
       />
     </Container>

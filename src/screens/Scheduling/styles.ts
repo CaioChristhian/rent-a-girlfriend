@@ -1,5 +1,4 @@
 import { getBottomSpace, getStatusBarHeight } from 'react-native-iphone-x-helper';
-import { RFValue } from 'react-native-responsive-fontsize';
 import styled, { css } from 'styled-components/native';
 
 interface DateValueProps {
@@ -25,7 +24,7 @@ export const Header = styled.View`
 export const Title = styled.Text`
   color: ${({ theme }) => theme.colors.shape};
   font-family: ${({ theme }) => theme.fonts.secondary_600};
-  font-size: ${RFValue(34)}px;
+  font-size: 34px;
   
   margin-top: 24px;
 `;
@@ -47,7 +46,7 @@ export const DateInfo = styled.View`
 export const DateTitle = styled.Text`
   color: ${({ theme }) => theme.colors.text};
   font-family: ${({ theme }) => theme.fonts.secondary_500};
-  font-size: ${RFValue(10)}px;
+  font-size: 10px;
 `;
 
 export const DateValueWrapper = styled.View<DateValueProps>`
@@ -61,7 +60,7 @@ export const DateValueWrapper = styled.View<DateValueProps>`
 export const DateValue = styled.Text`
   color: ${({ theme }) => theme.colors.shape};
   font-family: ${({ theme }) => theme.fonts.primary_500};
-  font-size: ${RFValue(15)}px;
+  font-size: 15px;
 `;
 
 export const Content = styled.ScrollView.attrs({

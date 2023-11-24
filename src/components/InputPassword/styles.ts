@@ -1,5 +1,4 @@
 import styled, { css } from 'styled-components/native';
-import { RFValue } from 'react-native-responsive-fontsize';
 import { TextInput } from 'react-native';
 
 interface Props {
@@ -29,7 +28,7 @@ export const IconContainer = styled.View<Props>`
 export const InputText = styled(TextInput)<Props>`
   flex: 1;
 
-  font-size: ${RFValue(15)}px;
+  font-size: 15px;
   font-family: ${({ theme }) => theme.fonts.primary_400};
   color: ${({ theme }) => theme.colors.text};
   background-color: ${({ theme }) => theme.colors.background_primary};

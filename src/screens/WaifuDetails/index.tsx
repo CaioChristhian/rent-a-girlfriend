@@ -57,8 +57,9 @@ export function WaifuDetails(){
       </Header>
 
       <GirlImages>
-        <ImageSlider imagesUrl={girl.photos} />
+        <ImageSlider key={girl.id} imagesUrl={girl.photos.map(photo => ({ photo }))} />
       </GirlImages>
+
 
       <Content>
         <Details>
@@ -68,8 +69,8 @@ export function WaifuDetails(){
           </Description>
 
           <Rent>
-            <Period>{girl.period}</Period>
-            <Price>R$ {girl.price}</Price>
+            <Period>{girl.rent.period}</Period>
+            <Price>R$ {girl.rent.price}</Price>
           </Rent>
         </Details>
 

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { StatusBar } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import { RFValue } from 'react-native-responsive-fontsize';
 import { MaterialCommunityIcons } from '@expo/vector-icons'; //name="face-woman-shimmer"
 
 import Logo from '../../assets/logo.svg';
@@ -53,8 +52,8 @@ export function Home(){
       <Header>
         <HeaderContent>
           <Logo 
-            width={RFValue(108)}
-            height={RFValue(12)}
+            width={108}
+            height={12}
           />
           <TotalWaifus>
             Total de 6 waifus
@@ -62,13 +61,13 @@ export function Home(){
         </HeaderContent>
       </Header>
 
-      { load ? <Load /> : 
+     
         <WaifuList
           data={cars}
           keyExtractor={item => String(item.id)}
           renderItem={({item}) => <Waifu data={item} onPress={() => handleWaifuDetails(item)} />}
         /> 
-      }
+      
     </Container>
   );
 }

@@ -70,7 +70,8 @@ export function SignUpSecondStep(){
         nextScreenRoute: 'SignIn'
       })
     })
-    .catch(() => {
+    .catch((error) => {
+      console.log(error)
       Alert.alert('Opa', 'Não foi possível cadastrar :/')
     })
   }

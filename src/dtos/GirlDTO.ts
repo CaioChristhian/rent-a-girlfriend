@@ -3,8 +3,10 @@ export interface GirlDTO {
   brand: string;
   name: string;
   about: string;
-  period: string;
-  price: number;
+  rent: {
+    period: string;
+    price: number;
+  }
   types: string;
   thumbnail: string;
   details: {

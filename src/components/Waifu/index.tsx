@@ -1,6 +1,4 @@
 import React from 'react';
-import { RectButtonProps } from 'react-native-gesture-handler';
-import { RFValue } from 'react-native-responsive-fontsize';
 
 import FlowerSvg from '../../assets/lotus.svg';
 import { GirlDTO } from '../../dtos/GirlDTO';
@@ -12,8 +10,9 @@ import {
   Period, Price,
   Type, WaifuImage
 } from './styles';
+import { TouchableOpacityProps } from 'react-native';
 
-interface Props extends RectButtonProps {
+interface Props extends TouchableOpacityProps {
   data: GirlDTO;
 }
 
@@ -26,14 +25,14 @@ export function Waifu({ data, ...rest }: Props){
 
         <About>
           <Rent>
-            <Period>{data.period}</Period>
-            <Price>{`R$ ${data.price}`}</Price>
+            <Period>{data.rent.period}</Period>
+            <Price>{`R$ ${data.rent.price}`}</Price>
           </Rent>
 
           <Type>
             <FlowerSvg 
-              width={RFValue(20)}
-              height={RFValue(20)}
+              width={20}
+              height={20}
             />
           </Type>
         </About>

@@ -1,6 +1,5 @@
 import styled from 'styled-components/native';
 import { getStatusBarHeight } from 'react-native-iphone-x-helper';
-import { RFValue } from 'react-native-responsive-fontsize';
 
 export const Container = styled.View`
   flex: 1;
@@ -22,7 +21,7 @@ export const Header = styled.View`
 export const Title = styled.Text`
   color: ${({ theme }) => theme.colors.shape};
   font-family: ${({ theme }) => theme.fonts.secondary_600};
-  font-size: ${RFValue(30)}px;
+  font-size: 30px;
   
   margin-top: 24px;
 `;
@@ -30,7 +29,7 @@ export const Title = styled.Text`
 export const SubTitle = styled.Text`
   color: ${({ theme }) => theme.colors.shape};
   font-family: ${({ theme }) => theme.fonts.secondary_400};
-  font-size: ${RFValue(15)}px;
+  font-size: 15px;
   
   margin-top: 24px;
 `;
@@ -54,13 +53,13 @@ export const Appointments = styled.View`
 export const AppointmentsTitle = styled.Text`
   color: ${({ theme }) => theme.colors.text};
   font-family: ${({ theme }) => theme.fonts.primary_400};
-  font-size: ${RFValue(15)}px;
+  font-size: 15px;
 `;
 
 export const AppointmentsQuantity = styled.Text`
   color: ${({ theme }) => theme.colors.title};
   font-family: ${({ theme }) => theme.fonts.primary_500};
-  font-size: ${RFValue(15)}px;
+  font-size: 15px;
 `;
 
 export const GirlWrapper = styled.View`
@@ -84,7 +83,7 @@ export const GirlFooter = styled.View`
 export const GirlFooterTitle = styled.Text`
   color: ${({ theme }) => theme.colors.text_detail};
   font-family: ${({ theme }) => theme.fonts.secondary_500};
-  font-size: ${RFValue(10)}px;
+  font-size: 10px;
 `;
 
 export const GirlFooterPeriod = styled.View`
@@ -94,5 +93,5 @@ export const GirlFooterPeriod = styled.View`
 export const GirlFooterDate = styled.Text`
   color: ${({ theme }) => theme.colors.title};
   font-family: ${({ theme }) => theme.fonts.primary_400};
-  font-size: ${RFValue(13)}px;
+  font-size: 13px;
 `;

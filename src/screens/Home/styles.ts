@@ -1,6 +1,4 @@
-import { FlatList } from 'react-native';
-import { RectButton } from 'react-native-gesture-handler';
-import { RFValue } from 'react-native-responsive-fontsize';
+import { FlatList, TouchableOpacity } from 'react-native';
 import styled from 'styled-components/native';
 
 import { GirlDTO } from '../../dtos/GirlDTO';
@@ -25,7 +23,7 @@ export const HeaderContent = styled.View`
 `;
 
 export const TotalWaifus = styled.Text`
-  font-size: ${RFValue(15)}px;
+  font-size: 15px;
   font-family: ${({ theme }) => theme.fonts.primary_400};
   color: ${({ theme }) => theme.colors.text};
 
@@ -38,7 +36,7 @@ export const WaifuList = styled(FlatList<GirlDTO>).attrs({
   showsVerticalScrollIndicator: false,
 })``;
 
-export const MyGirlsButton = styled(RectButton)`
+export const MyGirlsButton = styled(TouchableOpacity)`
   width: 60px;
   height: 60px;
 

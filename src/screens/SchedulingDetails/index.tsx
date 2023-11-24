@@ -3,7 +3,6 @@ import { format } from 'date-fns';
 import { useTheme } from 'styled-components';
 import { Feather } from '@expo/vector-icons';
 import { Alert, StatusBar } from 'react-native';
-import { RFValue } from 'react-native-responsive-fontsize';
 import { CommonActions, useNavigation, useRoute } from '@react-navigation/native';
 
 import { getPlatformDate } from '../../utils/getPlatformDate';
@@ -61,7 +60,7 @@ export function SchedulingDetails(){
   const route = useRoute();
   const { girl, dates } = route.params as Params;
 
-  const rentalTotal = Number(dates.length * girl.price)
+  const rentalTotal = Number(dates.length * girl.rent.price)
 
   async function handleConfirmSchedulingDetails() {
     const schedulesByGirl = await api.get(`/schedules_bygirls/${girl.id}`);
@@ -130,8 +129,8 @@ export function SchedulingDetails(){
           </Description>
 
           <Rent>
-            <Period>{girl.period}</Period>
-            <Price>R$ {girl.price}</Price>
+            <Period>{girl.rent.period}</Period>
+            <Price>R$ {girl.rent.price}</Price>
           </Rent>
         </Details>
 
@@ -147,7 +146,7 @@ export function SchedulingDetails(){
           <CalendarIcon>
             <Feather 
               name='calendar'
-              size={RFValue(24)}
+              size={24}
               color={theme.colors.shape}
             />
           </CalendarIcon>
@@ -159,7 +158,7 @@ export function SchedulingDetails(){
 
           <Feather 
             name='chevron-right'
-            size={RFValue(24)}
+            size={24}
             color={theme.colors.text}
           />
 
@@ -172,7 +171,7 @@ export function SchedulingDetails(){
         <RentalPrice>
           <RentalPriceLabel>TOTAL</RentalPriceLabel>
           <RentalPriceDetails>
-            <RentalPriceQuota>{`R$ ${girl.price} x${dates.length} diárias`}</RentalPriceQuota>
+            <RentalPriceQuota>{`R$ ${girl.rent.price} x${dates.length} diárias`}</RentalPriceQuota>
             <RentalPriceTotal>R$ {rentalTotal}</RentalPriceTotal>
           </RentalPriceDetails>
         </RentalPrice>

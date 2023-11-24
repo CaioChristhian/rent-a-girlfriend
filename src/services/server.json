@@ -294,7 +294,9 @@
         "2022-10-30",
         "2022-10-26",
         "2022-10-27",
-        "2022-10-24"
+        "2022-10-24",
+        "2023-12-08",
+        "2023-12-09"
       ]
     },
     {
@@ -337,7 +339,10 @@
         "2022-05-30",
         "2022-10-30",
         "2022-10-31",
-        "2022-10-28"
+        "2022-10-28",
+        "2023-12-07",
+        "2023-12-08",
+        "2023-12-09"
       ]
     },
     {
@@ -1025,6 +1030,153 @@
       "startDate": "31/10/2022",
       "endDate": "31/10/2022",
       "id": 13
+    },
+    {
+      "user_id": 1,
+      "girl": {
+        "id": "52930821-cbea-4b05-9f45-7c02b1bb0d8c",
+        "brand": "Bunny Girl",
+        "name": "Sakurajima Mai",
+        "about": "Mai é um indivíduo atraente com cabelos pretos na altura da cintura que tem franja pendurada no lado esquerdo com uma presilha em forma de coelho nas costas, olhos azul-púrpura e um corpo esbelto e bem definido. Em seu traje de coelho, ela usa saltos altos pretos brilhantes e envolve suas pernas longas e esbeltas em meias pretas translúcidas. Semelhante a um collant preto, a roupa destacava as linhas de seu corpo, enquanto o peito fazia um vale firme e modesto. Algemas brancas acentuavam seus pulsos e seu pescoço era adornado por uma gravata borboleta preta.",
+        "rent": {
+          "period": "Ao dia",
+          "price": 800
+        },
+        "types": "girl",
+        "thumbnail": "https://i.pinimg.com/236x/09/e8/77/09e87743de5595075d1a3ebeb255f15e.jpg",
+        "details": [
+          {
+            "type": "height",
+            "name": "165cm"
+          },
+          {
+            "type": "hair",
+            "name": "Liso Castanho"
+          },
+          {
+            "type": "waist",
+            "name": "52cm"
+          },
+          {
+            "type": "eyes",
+            "name": "Azul-púrpura"
+          },
+          {
+            "type": "bust",
+            "name": "80cm"
+          },
+          {
+            "type": "butt",
+            "name": "Média"
+          }
+        ],
+        "photos": [
+          "https://i.pinimg.com/236x/09/e8/77/09e87743de5595075d1a3ebeb255f15e.jpg",
+          "https://i.pinimg.com/564x/88/85/6d/88856dafe2e3288452034d88f8eca1e0.jpg",
+          "https://i.pinimg.com/564x/cb/27/c1/cb27c111cad768a2dd8ceb59c407c60e.jpg"
+        ]
+      },
+      "startDate": "06/12/2023",
+      "endDate": "06/12/2023",
+      "id": 14
+    },
+    {
+      "user_id": 1,
+      "girl": {
+        "id": "52930821-cbea-4b05-9f45-7c02b1bb0d8c",
+        "brand": "Bunny Girl",
+        "name": "Sakurajima Mai",
+        "about": "Mai é um indivíduo atraente com cabelos pretos na altura da cintura que tem franja pendurada no lado esquerdo com uma presilha em forma de coelho nas costas, olhos azul-púrpura e um corpo esbelto e bem definido. Em seu traje de coelho, ela usa saltos altos pretos brilhantes e envolve suas pernas longas e esbeltas em meias pretas translúcidas. Semelhante a um collant preto, a roupa destacava as linhas de seu corpo, enquanto o peito fazia um vale firme e modesto. Algemas brancas acentuavam seus pulsos e seu pescoço era adornado por uma gravata borboleta preta.",
+        "rent": {
+          "period": "Ao dia",
+          "price": 800
+        },
+        "types": "girl",
+        "thumbnail": "https://i.pinimg.com/236x/09/e8/77/09e87743de5595075d1a3ebeb255f15e.jpg",
+        "details": [
+          {
+            "type": "height",
+            "name": "165cm"
+          },
+          {
+            "type": "hair",
+            "name": "Liso Castanho"
+          },
+          {
+            "type": "waist",
+            "name": "52cm"
+          },
+          {
+            "type": "eyes",
+            "name": "Azul-púrpura"
+          },
+          {
+            "type": "bust",
+            "name": "80cm"
+          },
+          {
+            "type": "butt",
+            "name": "Média"
+          }
+        ],
+        "photos": [
+          "https://i.pinimg.com/236x/09/e8/77/09e87743de5595075d1a3ebeb255f15e.jpg",
+          "https://i.pinimg.com/564x/88/85/6d/88856dafe2e3288452034d88f8eca1e0.jpg",
+          "https://i.pinimg.com/564x/cb/27/c1/cb27c111cad768a2dd8ceb59c407c60e.jpg"
+        ]
+      },
+      "startDate": "07/12/2023",
+      "endDate": "08/12/2023",
+      "id": 15
+    },
+    {
+      "user_id": 1,
+      "girl": {
+        "id": "535e8de8-721b-4bac-8b72-7d29be7da467",
+        "brand": "Kanojo",
+        "name": "Mizuhara",
+        "about": "Chizuru tem cabelos castanhos na altura da cintura que são mais notavelmente amarrados com franja pendurada no lado direito e olhos castanhos claros. Ao posar como uma estudante diligente, ela usa óculos, um acessório de borboleta e ostenta o cabelo trançado duplo. Mais tarde é revelado que ela tem problemas de visão e usa um par de lentes de contato quando não está saindo com seus amigos. Sua apresentação é representada como sendo uma madonna, possuir uma beleza que só se pode sonhar em ter, roupas leves, maquiagem e acessórios.",
+        "rent": {
+          "period": "Ao dia",
+          "price": 500
+        },
+        "types": "girl",
+        "thumbnail": "https://64.media.tumblr.com/0f18a9079f39b8fb14c9d0677139a654/49952d61b86e3226-49/s1280x1920/cc2b62044b8d6a3147466710000d2241d82afed1.jpg",
+        "details": [
+          {
+            "type": "height",
+            "name": "160cm"
+          },
+          {
+            "type": "hair",
+            "name": "Liso Castanho"
+          },
+          {
+            "type": "waist",
+            "name": "62cm"
+          },
+          {
+            "type": "eyes",
+            "name": "Castanhos"
+          },
+          {
+            "type": "bust",
+            "name": "85cm"
+          },
+          {
+            "type": "butt",
+            "name": "Média"
+          }
+        ],
+        "photos": [
+          "https://64.media.tumblr.com/0f18a9079f39b8fb14c9d0677139a654/49952d61b86e3226-49/s1280x1920/cc2b62044b8d6a3147466710000d2241d82afed1.jpg",
+          "https://i.pinimg.com/564x/69/e4/4f/69e44f901ba0c8403ed9350ffd35bac2.jpg",
+          "https://i.pinimg.com/564x/2f/66/6e/2f666e2dc60ddce28d8dd1698fc98e35.jpg"
+        ]
+      },
+      "startDate": "07/12/2023",
+      "endDate": "08/12/2023",
+      "id": 16
     }
   ]
 }

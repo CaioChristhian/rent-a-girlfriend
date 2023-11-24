@@ -1,8 +1,7 @@
 import styled from 'styled-components/native';
-import { RFValue } from 'react-native-responsive-fontsize';
-import { RectButton } from 'react-native-gesture-handler';
+import { TouchableOpacity } from 'react-native';
 
-export const Container = styled(RectButton)`
+export const Container = styled(TouchableOpacity)`
   width: 80px;
   height: 56px;
 
@@ -15,5 +14,5 @@ export const Container = styled(RectButton)`
 export const Title = styled.Text`
   font-family: ${({ theme }) => theme.fonts.primary_500};
   color: ${({ theme }) => theme.colors.shape};
-  font-size: ${RFValue(15)}px;
+  font-size: 15px;
 `;
