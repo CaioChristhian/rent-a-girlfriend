@@ -1,5 +1,4 @@
 import { getStatusBarHeight } from 'react-native-iphone-x-helper';
-import { RFValue } from 'react-native-responsive-fontsize';
 import styled from 'styled-components/native';
 
 export const Container = styled.View`
@@ -23,7 +22,7 @@ export const Steps = styled.View`
 `;
 
 export const Title = styled.Text`
-  font-size: ${RFValue(40)}px;
+  font-size: 40px;
   font-family: ${({ theme }) => theme.fonts.secondary_600};
   color: ${({ theme }) => theme.colors.title};
 
@@ -32,10 +31,10 @@ export const Title = styled.Text`
 `;
 
 export const SubTitle = styled.Text`
-  font-size: ${RFValue(15)}px;
+  font-size: 15px;
   font-family: ${({ theme }) => theme.fonts.primary_400};
   color: ${({ theme }) => theme.colors.text_detail};
-  line-height: ${RFValue(25)}px;
+  line-height: 25px;
 `;
 
 export const Form = styled.View`
@@ -45,7 +44,7 @@ export const Form = styled.View`
 `;
 
 export const FormTitle = styled.Text`
-  font-size: ${RFValue(20)}px;
+  font-size: 20px;
   font-family: ${({ theme }) => theme.fonts.secondary_600};
   color: ${({ theme }) => theme.colors.title};
   margin-bottom: 24px;
